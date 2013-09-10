@@ -16,5 +16,4 @@ matrix:
     - rvm: ruby-head
 notifications:
   recipients:
-    - yann.lugrin@sans-savoir.net
-    - remy@rymai.me
+    - alexrabarts@gmail.com

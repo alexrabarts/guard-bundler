@@ -1,10 +1,7 @@
-# Guard::Bundler
-[![Gem Version](https://badge.fury.io/rb/guard-bundler.png)](http://badge.fury.io/rb/guard-bundler) [![Build Status](https://travis-ci.org/guard/guard-bundler.png?branch=master)](https://travis-ci.org/guard/guard-bundler) [![Dependency Status](https://gemnasium.com/guard/guard-bundler.png)](https://gemnasium.com/guard/guard-bundler) [![Code Climate](https://codeclimate.com/github/guard/guard-bundler.png)](https://codeclimate.com/github/guard/guard-bundler) [![Coverage Status](https://coveralls.io/repos/guard/guard-bundler/badge.png?branch=master)](https://coveralls.io/r/guard/guard-bundler)
+# Guard::Npm
+[![Gem Version](https://badge.fury.io/rb/guard-npm.png)](http://badge.fury.io/rb/guard-npm) [![Build Status](https://travis-ci.org/alexrabarts/guard-npm.png?branch=master)](https://travis-ci.org/alexrabarts/guard-npm) [![Dependency Status](https://gemnasium.com/alexrabarts/guard-npm.png)](https://gemnasium.com/alexrabarts/guard-npm) [![Code Climate](https://codeclimate.com/github/alexrabarts/guard-npm.png)](https://codeclimate.com/github/alexrabarts/guard-npm) [![Coverage Status](https://coveralls.io/repos/alexrabarts/guard-npm/badge.png?branch=master)](https://coveralls.io/r/alexrabarts/guard-npm)
 
-Bundler guard allows to automatically & intelligently install/update bundle when needed.
-
-* Compatible with Bundler 1.0.x
-* Tested against Ruby 1.8.7, 1.9.2, 1.9.3, REE and the latest versions of Rubinius.
+npm guard allows to automatically & intelligently install/update package.json when needed.
 
 ## Install
 
@@ -13,21 +10,21 @@ Please be sure to have [Guard](https://github.com/guard/guard) installed before 
 Install the gem:
 
 ```
-$ gem install guard-bundler
+$ gem install guard-npm
 ```
 
 Add it to your Gemfile (inside development group):
 
 ``` ruby
 group :development do
-  gem 'guard-bundler'
+  gem 'guard-npm'
 end
 ```
 
 Add guard definition to your Guardfile by running this command:
 
 ```
-$ guard init bundler
+$ guard init npm
 ```
 
 ## Usage
@@ -36,15 +33,13 @@ Please read [Guard usage doc](https://github.com/guard/guard#readme)
 
 ## Guardfile
 
-Bundler guard can be really adapted to all kind of projects.
+npm guard can be really adapted to all kind of projects.
 
 ### Standard RubyGem project
 
 ```ruby
-guard 'bundler' do
-  watch('Gemfile')
-  # Uncomment next line if Gemfile contain `gemspec' command
-  # watch(/^.+\.gemspec/)
+guard 'npm' do
+  watch('package.json')
 end
 ```
 
@@ -52,8 +47,8 @@ Please read [Guard doc](https://github.com/guard/guard#readme) for more informat
 
 ## Development
 
-* Source hosted at [GitHub](https://github.com/guard/guard-bundler)
-* Report issues/Questions/Feature requests on [GitHub Issues](https://github.com/guard/guard-bundler/issues)
+* Source hosted at [GitHub](https://github.com/alexrabarts/guard-npm)
+* Report issues/Questions/Feature requests on [GitHub Issues](https://github.com/alexrabarts/guard-npm/issues)
 
 Pull requests are very welcome! Make sure your patches are well tested. Please create a topic branch for every separate change
 you make.
@@ -61,3 +56,4 @@ you make.
 ## Authors
 
 [Yann Lugrin](https://github.com/yannlugrin)
+[Alex Rabarts](https://github.com/alexrabarts)

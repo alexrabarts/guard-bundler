@@ -1,17 +1,17 @@
 # encoding: utf-8
 require 'spec_helper'
 
-describe Guard::Bundler::Notifier do
-  subject { Guard::Bundler::Notifier }
+describe Guard::Npm::Notifier do
+  subject { Guard::Npm::Notifier }
 
   it 'should format success message' do
     message = subject.guard_message(true, 10.1)
-    message.should == "Bundle has been installed\nin 10.1 seconds."
+    message.should == "package.json has been installed\nin 10.1 seconds."
   end
 
   it 'should format fail message' do
     message = subject.guard_message(false, 10.1)
-    message.should == "Bundle can't be installed,\nplease check manually."
+    message.should == "package.json can't be installed,\nplease check manually."
   end
 
   it 'should select success image' do
@@ -24,8 +24,8 @@ describe Guard::Bundler::Notifier do
 
   it 'should call Guard::Notifier' do
     ::Guard::Notifier.should_receive(:notify).with(
-      "Bundle has been installed\nin 10.1 seconds.",
-      :title => 'bundle install',
+      "package.json has been installed\nin 10.1 seconds.",
+      :title => 'npm install',
       :image => :success
     )
     subject.notify(true, 10.1)

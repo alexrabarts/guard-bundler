@@ -1,5 +1,5 @@
-guard 'bundler' do
-  watch('Gemfile')
+guard :npm do
+  watch('package.json')
   # Uncomment next line if your Gemfile contains the `gemspec' command.
   # watch(/^.+\.gemspec/)
 end
