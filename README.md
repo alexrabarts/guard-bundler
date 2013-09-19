@@ -1,5 +1,5 @@
 # Guard::Npm
-[![Gem Version](https://badge.fury.io/rb/guard-npm.png)](http://badge.fury.io/rb/guard-npm) [![Build Status](https://travis-ci.org/alexrabarts/guard-npm.png?branch=master)](https://travis-ci.org/alexrabarts/guard-npm) [![Dependency Status](https://gemnasium.com/alexrabarts/guard-npm.png)](https://gemnasium.com/alexrabarts/guard-npm) [![Code Climate](https://codeclimate.com/github/alexrabarts/guard-npm.png)](https://codeclimate.com/github/alexrabarts/guard-npm) [![Coverage Status](https://coveralls.io/repos/alexrabarts/guard-npm/badge.png?branch=master)](https://coveralls.io/r/alexrabarts/guard-npm)
+[![Build Status](https://travis-ci.org/alexrabarts/guard-npm.png)](https://travis-ci.org/alexrabarts/guard-npm)
 
 npm guard allows to automatically & intelligently install/update package.json when needed.
 
