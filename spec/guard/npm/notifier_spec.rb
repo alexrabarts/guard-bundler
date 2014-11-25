@@ -6,24 +6,24 @@ describe Guard::Npm::Notifier do
 
   it 'should format success message' do
     message = subject.guard_message(true, 10.1)
-    message.should == "package.json has been installed\nin 10.1 seconds."
+    expect(message).to eq("package.json has been installed\nin 10.1 seconds.")
   end
 
   it 'should format fail message' do
     message = subject.guard_message(false, 10.1)
-    message.should == "package.json can't be installed,\nplease check manually."
+    expect(message).to eq("package.json can't be installed,\nplease check manually.")
   end
 
   it 'should select success image' do
-    subject.guard_image(true).should == :success
+    expect(subject.guard_image(true)).to eq(:success)
   end
 
   it 'should select failed image' do
-    subject.guard_image(false).should == :failed
+    expect(subject.guard_image(false)).to eq(:failed)
   end
 
   it 'should call Guard::Notifier' do
-    ::Guard::Notifier.should_receive(:notify).with(
+    expect(::Guard::Notifier).to receive(:notify).with(
       "package.json has been installed\nin 10.1 seconds.",
       :title => 'npm install',
       :image => :success

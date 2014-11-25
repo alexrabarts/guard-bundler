@@ -23,7 +23,7 @@ describe Guard::Npm do
   context '#npm_install' do
 
     it 'should call `npm install\' command' do
-      subject.should_receive(:system).with('npm install')
+      expect(subject).to receive(:system).with('npm install')
       subject.send(:install_package)
     end
 
@@ -32,7 +32,7 @@ describe Guard::Npm do
   context '#npm_shrinkwrap' do
 
     it 'should call `npm shrinkwrap\' command' do
-      subject.should_receive(:system).with('npm install')
+      expect(subject).to receive(:system).with('npm install')
       subject.send(:shrinkwrap_package)
     end
 
@@ -41,12 +41,12 @@ describe Guard::Npm do
   context '#start' do
 
     it 'should call #npm_install' do
-      subject.should_receive(:install_package).and_return(true)
+      expect(subject).to receive(:install_package).and_return(true)
       subject.start
     end
 
     it 'should call #npm_shrinkwrap' do
-      subject.should_receive(:shrinkwrap_package).and_return(true)
+      expect(subject).to receive(:shrinkwrap_package).and_return(true)
       subject.start
     end
 
@@ -55,12 +55,12 @@ describe Guard::Npm do
   context '#reload' do
 
     it 'should call #npm_install' do
-      subject.should_receive(:install_package).and_return(true)
+      expect(subject).to receive(:install_package).and_return(true)
       subject.reload
     end
 
     it 'should call #npm_shrinkwrap' do
-      subject.should_receive(:shrinkwrap_package).and_return(true)
+      expect(subject).to receive(:shrinkwrap_package).and_return(true)
       subject.reload
     end
 
@@ -69,12 +69,12 @@ describe Guard::Npm do
   context '#run_all' do
 
     it 'should call #npm_install' do
-      subject.should_receive(:install_package).and_return(true)
+      expect(subject).to receive(:install_package).and_return(true)
       subject.run_all
     end
 
     it 'should call #npm_shrinkwrap' do
-      subject.should_receive(:shrinkwrap_package).and_return(true)
+      expect(subject).to receive(:shrinkwrap_package).and_return(true)
       subject.run_all
     end
 
@@ -83,12 +83,12 @@ describe Guard::Npm do
   context '#run_on_additions' do
 
     it 'should call #npm_install' do
-      subject.should_receive(:install_package).and_return(true)
+      expect(subject).to receive(:install_package).and_return(true)
       subject.run_on_additions
     end
 
     it 'should call #npm_shrinkwrap' do
-      subject.should_receive(:shrinkwrap_package).and_return(true)
+      expect(subject).to receive(:shrinkwrap_package).and_return(true)
       subject.run_on_additions
     end
 
@@ -97,12 +97,12 @@ describe Guard::Npm do
   context '#run_on_modifications' do
 
     it 'should call #npm_install' do
-      subject.should_receive(:install_package).and_return(true)
+      expect(subject).to receive(:install_package).and_return(true)
       subject.run_on_modifications
     end
 
     it 'should call #npm_shrinkwrap' do
-      subject.should_receive(:shrinkwrap_package).and_return(true)
+      expect(subject).to receive(:shrinkwrap_package).and_return(true)
       subject.run_on_modifications
     end
 

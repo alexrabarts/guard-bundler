@@ -30,6 +30,5 @@ end
 # installed on Travis CI
 #
 group :test do
-  gem 'rspec', '>= 2.14.1'
   gem 'coveralls', :require => false
 end
