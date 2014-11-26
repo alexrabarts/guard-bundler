@@ -32,3 +32,7 @@ end
 group :test do
   gem 'coveralls', :require => false
 end
+
+group :development, :test do
+  gem 'rspec'
+end
