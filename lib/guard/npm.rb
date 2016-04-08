@@ -34,7 +34,7 @@ module Guard
     end
 
     def install_package
-      system('npm install')
+      system options[:cli] ? "npm install #{options[:cli]}" : 'npm install'
 
       $? == 0 ? :package_installed : false
     end

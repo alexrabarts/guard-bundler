@@ -43,6 +43,15 @@ guard 'npm' do
 end
 ```
 
+### Configuration
+
+```ruby
+# Provide parameters to the `npm install` command
+guard 'npm', commandline: '--loglevel=error' do
+  watch('package.json')
+end
+```
+
 Please read [Guard doc](https://github.com/guard/guard#readme) for more information about the Guardfile DSL.
 
 ## Development
