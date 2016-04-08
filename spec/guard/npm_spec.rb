@@ -1,5 +1,6 @@
 # encoding: utf-8
 require 'spec_helper'
+require 'guard/compat/test/helper'
 
 describe Guard::Npm do
   package_file = 'package.json'

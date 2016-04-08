@@ -1,6 +1,6 @@
 # encoding: utf-8
 require 'guard'
-require 'guard/plugin'
+require 'guard/compat/plugin'
 
 module Guard
   class Npm < Plugin
@@ -34,15 +34,19 @@ module Guard
     end
 
     def install_package
-      system('npm install')
+      system command
 
       $? == 0 ? :package_installed : false
     end
 
     def shrinkwrap_package
-      system('npm install')
+      system command
 
       $? == 0 ? :package_shrinkwrapped : false
+    end
+
+    def command
+      options[:cli] ? "npm install #{options[:cli]}" : 'npm install'
     end
   end
 end
