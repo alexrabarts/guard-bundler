@@ -47,7 +47,7 @@ end
 
 ```ruby
 # Provide parameters to the `npm install` command
-guard 'npm', commandline: '--loglevel=error' do
+guard 'npm', cli: '--loglevel=error' do
   watch('package.json')
 end
 ```
