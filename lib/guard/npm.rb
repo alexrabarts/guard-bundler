@@ -1,6 +1,6 @@
 # encoding: utf-8
 require 'guard'
-require 'guard/plugin'
+require 'guard/compat/plugin'
 
 module Guard
   class Npm < Plugin
